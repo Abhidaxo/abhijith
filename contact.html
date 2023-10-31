@@ -153,7 +153,7 @@ Author URL: http://w3layouts.com
             <div class="input-grids">
               <input type="text" name="Name" id="w3lName" placeholder="Your Name*" class="contact-input"
                 required="" />
-              <input type="email" name="Sender" id="w3lSender" placeholder="Your Email*" class="contact-input"
+              <input type="email" name="Email" id="w3lSender" placeholder="Your Email*" class="contact-input"
                 required="" />
               <input type="text" name="Subect" id="w3lSubect" placeholder="Subject*" class="contact-input"
                 required="" />
@@ -216,12 +216,12 @@ Author URL: http://w3layouts.com
     </div>
 
     <script>
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbwVXEuAVoQBdlVwpLY1PzztWDEqyROwK_MRIfrkREpcbTofUTRjGdCshg5pYzg31OCj/exec'
-			const form = document.forms['form-data']
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbwVXEuAVoQBdlVwpLY1PzztWDEqyROwK_MRIfrkREpcbTofUTRjGdCshg5pYzg31OCj/exec'
+	const form = document.forms['form-data']
 		  
-			form.addEventListener('submit', e => {
-			  e.preventDefault()
-			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => alert("Thank you! your form is submitted successfully." ))
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
